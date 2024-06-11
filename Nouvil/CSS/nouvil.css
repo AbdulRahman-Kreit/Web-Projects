@@ -1,0 +1,115 @@
+/* Start Variables */
+:root {
+    /* Color */
+    --dark-purple: #200016;
+    --dark-blue: #10001f;
+    /* Transitions */
+    --main-transition: 0.3s;
+}
+/* End Variables */
+/* Start Settings */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open-sans", "sans-serif";
+    background: linear-gradient(var(--dark-purple), var(--dark-blue));
+    height: 100vh;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/* End Settings */
+/* Start Header */
+.header {
+    position: absolute;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    z-index: 2;
+}
+.header h2 .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.header .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .links li {
+    margin-right: 30px;
+}
+.header .links li a {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 15px;
+    transition: var(--main-transition);
+}
+.header .links li a:hover, .active {
+    background-color: white;
+    color: var(--dark-purple);
+    border-radius: 20px;
+}
+/* End Header */
+/* Start Landing */
+.landing {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.landing::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, var(--dark-purple), transparent);
+}
+.landing img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.landing #moon {
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+.landing .nouvil {
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: translateY(-160px);
+}
+/* End Landing */
+/* Start Content */
+.content {
+    padding: 30px;
+    color: white;
+}
+.content h2 {
+    margin: 20px;
+    font-size: 30px;
+}
+.content p {
+    margin: 20px;
+    line-height: 1.6;
+    color: #ccc;
+}
+/* End Content */
